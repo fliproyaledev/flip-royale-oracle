@@ -6,7 +6,7 @@ import { loadUsers, saveUsers } from '@/lib/users'
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '4mb',
+      sizeLimit: '512kb',
     },
   },
 }
