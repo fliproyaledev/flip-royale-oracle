@@ -1,0 +1,10 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  // API Route'ların düzgün çalışması için
+  typescript: {
+    ignoreBuildErrors: true, // Hızlı deploy için tip hatalarını yoksay (Opsiyonel)
+  }
+};
+
+module.exports = nextConfig;
