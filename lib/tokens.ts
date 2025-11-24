@@ -30,6 +30,17 @@ export function parseDexscreenerLink(input?: string) {
   return {}
 }
 
+// 👇 EKSİK OLAN VE EKLENEN FONKSİYON 👇
+export function buildDexscreenerViewUrl(url?: string, net?: string, pair?: string): string {
+  if (url && url.includes('dexscreener.com')) return url
+  if (net && pair) {
+    const cleanPair = cleanAddress(pair);
+    if(cleanPair) return `https://dexscreener.com/${net}/${cleanPair}`
+  }
+  return ''
+}
+// ------------------------------------
+
 type RawRow = { [key: string]: any }
 
 // Token ID güvenli hale getirilir (Ticker kullanılır)
